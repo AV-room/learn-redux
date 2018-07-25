@@ -3,10 +3,11 @@ import { render } from 'react-dom';
 
 // replaced browserHistory with history exported from store.js
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-
 import { Provider } from 'react-redux';
 import { store, history } from './store';
-import Main from './components/Main';
+
+// import Main from './components/Main';
+import App from './components/App';
 import PhotoGrid from './components/PhotoGrid';
 import Single from './components/Single';
 import css from './styles/style.styl';
@@ -14,7 +15,7 @@ import css from './styles/style.styl';
 const router = (
   <Provider store={ store }>
     <Router history={ history }>
-      <Route path="/" component={ Main }>
+      <Route path="/" component={ App }>
         <IndexRoute component={ PhotoGrid }></IndexRoute>
         <Route path="/view/:postId" component={ Single }></Route>
       </Route>
