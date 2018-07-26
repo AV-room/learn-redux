@@ -5,7 +5,7 @@
 export function increment(_index) {
   return {
     type: 'INCREMENT_LIKES',
-    index: index
+    index: _index
   }
 }
 
