@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import PropTypes from 'prop-types';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Photo extends React.Component {
@@ -32,5 +33,12 @@ class Photo extends React.Component {
     )
   }
 }
+
+/* Photo.propTypes = {
+  i: PropTypes.number,
+  post: PropTypes.object,
+  comments: PropTypes.object,
+  increment: PropTypes.func
+}; */
 
 export default Photo;
